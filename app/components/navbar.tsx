@@ -9,7 +9,7 @@ export default function Navbar() {
         </h1>
 
         <NavBarButton text={"Selection Sort"} link={"/selection_sort"} />
-        <NavBarButton text={"Bubble Sort"} link={"/selection_sort"} />
+        <NavBarButton text={"Bubble Sort"} link={"/bubble_sort"} />
         <NavBarButton text={"Heap Sort"} link={"/selection_sort"} />
     </div>
 }
