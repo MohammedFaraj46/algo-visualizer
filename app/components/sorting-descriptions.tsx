@@ -36,3 +36,9 @@ export function BubbleSortDescription() {
         <b className="text-red-500">Time complexity: O(n^2) (bad)</b>
     </p>
 }
+
+export function MergeSortDescription() {
+    return <p className="p-8 w-175">
+        Lorem ipsum
+    </p>
+}
