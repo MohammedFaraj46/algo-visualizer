@@ -19,6 +19,20 @@ export function SelectionSortDescription() {
 
 export function BubbleSortDescription() {
     return <p className="p-8 w-175">
-        Lorem ipsum
+        Bubble sort compares two values and swaps them if the left value is bigger than the right value.
+        When that is done, the sort moves 1 step to the right and compares again.
+        <br/><br/>
+
+        Bubble sort consists of two loops: The outer loop and inner loop.
+        The inner loop does one full pass through the array, moving the largest value to the end. (N)
+        <br/><br/>
+
+        The outer loop repeats this process, each time ignoring the last element since it's already in its correct position. (N - 1)
+        <br/><br/>
+
+        Bubble sort is inefficient on large datasets, but simple to understand. It can be optimized by stopping the algorithm if no swaps occur.
+        <br/><br/>
+
+        <b className="text-red-500">Time complexity: O(n^2) (bad)</b>
     </p>
 }
