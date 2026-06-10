@@ -39,6 +39,19 @@ export function BubbleSortDescription() {
 
 export function MergeSortDescription() {
     return <p className="p-8 w-175">
-        Lorem ipsum
+        Merge sort works by splitting the array in half repeatedly until each piece has only one element. A single element is always sorted by definition.
+        <br/><br/>
+
+        When an array is fully split, the pieces are repeatedly merged back together.
+        During every merge the algorithm chooses the smallest element of two items, and combines both pieces into a sorted array.
+        <br/><br/>
+
+        The merging happens recursively until the whole array is sorted.
+        <br/><br/>
+
+        Merge sort is significantly more efficient on large datasets, at the cost of using extra memory.
+        <br/><br/>
+
+        <b className="text-green-500">Time complexity: O(n log n) (good)</b>
     </p>
 }

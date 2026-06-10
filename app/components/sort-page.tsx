@@ -2,7 +2,7 @@ import {motion} from "motion/react";
 import {Fragment, type ReactNode, useEffect, useState} from "react";
 
 type SortItem = { id: number, value: number };
-type SetArray = (arr: SortItem[]) => void;
+type SetArray = (array: SortItem[]) => void;
 type SetIndices = (indices: number[]) => void;
 
 interface Props {
