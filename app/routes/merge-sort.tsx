@@ -47,7 +47,7 @@ async function mergeSort(toBeSortedArray: SortItem[], setToBeSortedArray: (array
     setActiveIndices([]);
 }
 
-export default function MergeSort() {
+export default function MergeSortPage() {
     return <SortPage
         algorithm={mergeSort}
         title="Merge Sort"

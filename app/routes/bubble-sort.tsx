@@ -25,7 +25,7 @@ async function bubbleSort(toBeSortedArray: SortItem[], setToBeSortedArray: (arr:
     setActiveIndices([]);
 }
 
-export default function SelectionSortPage() {
+export default function BubbleSortPage() {
     return <SortPage
         algorithm={bubbleSort}
         title="Bubble Sort"

@@ -55,3 +55,23 @@ export function MergeSortDescription() {
         <b className="text-green-500">Time complexity: O(n log n) (good)</b>
     </p>
 }
+
+export function QuickSortDescription() {
+    return <p className="p-8 w-175">
+        Quick sort works by picking a pivot element. In this implementation the last element of the array.
+        It then splits the array so that everything smaller than the pivot moves to the left, and everything larger moves to the right.
+        The pivot is now in its correct final position.
+        <br/><br/>
+
+        This process is applied recursively to the left and right sides, each time picking a new pivot and rearranging around it.
+        This continues until every portion has one or zero elements, at which point the array is fully sorted.
+        <br/><br/>
+
+        Quick sort is most of the times very fast, unless the array is already sorted.
+        <br/><br/>
+
+        <b className="text-green-500">Average time complexity: O(n log n) (good)</b>
+        <br/>
+        <b className="text-red-500">Worst case time complexity: O(n^2) (bad — already sorted array)</b>
+    </p>
+}

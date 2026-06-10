@@ -5,6 +5,7 @@ export default [
         index("routes/home.tsx"),
         route("selection_sort", "./routes/selection-sort.tsx"),
         route("bubble_sort", "./routes/bubble-sort.tsx"),
-        route("merge_sort", "./routes/merge-sort.tsx")
+        route("merge_sort", "./routes/merge-sort.tsx"),
+        route("quick_sort", "./routes/quick-sort.tsx")
     ])
 ] satisfies RouteConfig;
