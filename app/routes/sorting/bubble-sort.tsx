@@ -1,9 +1,8 @@
-import SortPage from "~/components/sort-page";
-import {BubbleSortDescription} from "~/components/sorting-descriptions";
+import SortPage from "~/components/sortPage/sort-page";
+import {BubbleSortDescription} from "~/components/sortPage/sorting-descriptions";
+import type {ArrayItem} from "~/components/lib/types";
 
-type SortItem = { id: number, value: number };
-
-async function bubbleSort(toBeSortedArray: SortItem[], setToBeSortedArray: (arr: SortItem[]) => void, setActiveIndices: (indices: number[]) => void) {
+async function bubbleSort(toBeSortedArray: ArrayItem[], setToBeSortedArray: (arr: ArrayItem[]) => void, setActiveIndices: (indices: number[]) => void) {
     let sorted = [...toBeSortedArray];
     let size = sorted.length;
 

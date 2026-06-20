@@ -1,9 +1,8 @@
-import SortPage from "~/components/sort-page";
-import {QuickSortDescription} from "~/components/sorting-descriptions";
+import SortPage from "~/components/sortPage/sort-page";
+import {QuickSortDescription} from "~/components/sortPage/sorting-descriptions";
+import type {ArrayItem} from "~/components/lib/types";
 
-type SortItem = { id: number, value: number };
-
-const partition = async (array: SortItem[], startIdx: number, endIdx: number, setToBeSortedArray: (array: SortItem[]) => void, setActiveIndices: (indices: number[]) => void) => {
+const partition = async (array: ArrayItem[], startIdx: number, endIdx: number, setToBeSortedArray: (array: ArrayItem[]) => void, setActiveIndices: (indices: number[]) => void) => {
     let pivot = array[endIdx];
     let i = startIdx - 1;
 
@@ -28,7 +27,7 @@ const partition = async (array: SortItem[], startIdx: number, endIdx: number, se
     return i;
 }
 
-const quickSortAlgorithm = async (array: SortItem[], low: number, high: number, setToBeSortedArray: (array: SortItem[]) => void, setActiveIndices: (indices: number[]) => void) => {
+const quickSortAlgorithm = async (array: ArrayItem[], low: number, high: number, setToBeSortedArray: (array: ArrayItem[]) => void, setActiveIndices: (indices: number[]) => void) => {
     // Check if there is nothing to sort
     if (low >= high) {
         return array;
@@ -42,7 +41,7 @@ const quickSortAlgorithm = async (array: SortItem[], low: number, high: number, 
     return array;
 }
 
-async function quickSort(toBeSortedArray: SortItem[], setToBeSortedArray: (array: SortItem[]) => void, setActiveIndices: (indices: number[]) => void) {
+async function quickSort(toBeSortedArray: ArrayItem[], setToBeSortedArray: (array: ArrayItem[]) => void, setActiveIndices: (indices: number[]) => void) {
     const sorted = await quickSortAlgorithm([...toBeSortedArray], 0, toBeSortedArray.length - 1, setToBeSortedArray, setActiveIndices);
     setToBeSortedArray(sorted);
     setActiveIndices([]);

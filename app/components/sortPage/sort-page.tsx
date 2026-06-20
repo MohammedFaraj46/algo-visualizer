@@ -1,25 +1,22 @@
 import {motion} from "motion/react";
 import {Fragment, type ReactNode, useEffect, useState} from "react";
-
-type SortItem = { id: number, value: number };
-type SetArray = (array: SortItem[]) => void;
-type SetIndices = (indices: number[]) => void;
+import type {SetArray, SetIndices, ArrayItem} from "~/components/lib/types";
 
 interface Props {
-    algorithm: (toBeSortedArray: SortItem[], setToBeSortedArray: SetArray, setIndices: SetIndices) => Promise<void>;
+    algorithm: (toBeSortedArray: ArrayItem[], setToBeSortedArray: SetArray, setIndices: SetIndices) => Promise<void>;
     title: string;
     description: ReactNode; // I was not sure if I should use ReactNode or Fragment
 }
 
 export default function SortPage({ algorithm, title, description }: Props) {
-    const [tbsArray, setTbsArray] = useState<SortItem[]>([]);
+    const [tbsArray, setTbsArray] = useState<ArrayItem[]>([]);
     const [activeIndices, setActiveIndices] = useState<number[]>([]);
 
     useEffect(() => {
         setTbsArray(generateRandomArray());
     }, []);
 
-    function generateRandomArray(): SortItem[] {
+    function generateRandomArray(): ArrayItem[] {
         return Array.from({ length: 10 }, (_, i) => ({
             id: i,
             value: Math.floor(Math.random() * 100)

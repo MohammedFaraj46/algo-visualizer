@@ -1,10 +1,9 @@
-import SortPage from "~/components/sort-page";
-import {MergeSortDescription} from "~/components/sorting-descriptions";
+import SortPage from "~/components/sortPage/sort-page";
+import {MergeSortDescription} from "~/components/sortPage/sorting-descriptions";
+import type {ArrayItem} from "~/components/lib/types";
 
-type SortItem = { id: number, value: number };
-
-const merge = async (leftArray: SortItem[], rightArray: SortItem[]) => {
-    let sorted: SortItem[] = [];
+const merge = async (leftArray: ArrayItem[], rightArray: ArrayItem[]) => {
+    let sorted: ArrayItem[] = [];
 
     // While both arrays have items, they can be sorted.
     while (leftArray.length && rightArray.length) {
@@ -27,7 +26,7 @@ const merge = async (leftArray: SortItem[], rightArray: SortItem[]) => {
     return sorted;
 }
 
-const mergeSortAlgorithm = async (array: SortItem[]): Promise<SortItem[]> => {
+const mergeSortAlgorithm = async (array: ArrayItem[]): Promise<ArrayItem[]> => {
     if (array.length <= 1) {
         return array;
     }
@@ -41,7 +40,7 @@ const mergeSortAlgorithm = async (array: SortItem[]): Promise<SortItem[]> => {
     return merge(sortedLeft, sortedRight);
 }
 
-async function mergeSort(toBeSortedArray: SortItem[], setToBeSortedArray: (array: SortItem[]) => void, setActiveIndices: (indices: number[]) => void) {
+async function mergeSort(toBeSortedArray: ArrayItem[], setToBeSortedArray: (array: ArrayItem[]) => void, setActiveIndices: (indices: number[]) => void) {
     const sorted = await mergeSortAlgorithm([...toBeSortedArray]);
     setToBeSortedArray(sorted);
     setActiveIndices([]);

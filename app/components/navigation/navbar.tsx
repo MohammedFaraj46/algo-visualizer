@@ -1,4 +1,4 @@
-import NavBarButton from "~/components/navbar-button";
+import NavBarButton from "~/components/navigation/navbar-button";
 import {Link} from "react-router";
 
 
@@ -8,9 +8,15 @@ export default function Navbar() {
             <Link to="/">AlgoVisualizer</Link>
         </h1>
 
+        <br />
+        <label>Sorting</label>
         <NavBarButton text={"Selection Sort"} link={"/selection_sort"} />
         <NavBarButton text={"Bubble Sort"} link={"/bubble_sort"} />
         <NavBarButton text={"Merge Sort"} link={"/merge_sort"} />
         <NavBarButton text={"Quick Sort"} link={"/quick_sort"} />
+
+        <br/>
+        <label>Searching</label>
+        <NavBarButton text={"Linear Search"} link={"/linear_search"} />
     </div>
 }
