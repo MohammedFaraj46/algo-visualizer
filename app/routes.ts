@@ -9,6 +9,7 @@ export default [
         route("quick_sort", "./routes/sorting/quick-sort.tsx"),
 
         route("linear_search", "./routes/searching/linear-search.tsx"),
-        route("binary_search", "./routes/searching/binary-search.tsx")
+        route("binary_search", "./routes/searching/binary-search.tsx"),
+        route("binary_search_tree", "./routes/trees/binary-search-tree-page.tsx")
     ])
 ] satisfies RouteConfig;

@@ -19,5 +19,8 @@ export default function Navbar() {
         <label>Searching</label>
         <NavBarButton text={"Linear Search"} link={"/linear_search"} />
         <NavBarButton text={"Binary Search"} link={"/binary_search"} />
+
+        <br/>
+        <NavBarButton text={"Binary Search Tree"} link={"/binary_search_tree"} />
     </div>
 }
