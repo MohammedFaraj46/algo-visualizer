@@ -11,6 +11,10 @@ export default class BSTNode {
     }
 
     insert(value: number): void {
+        if (value == this.value) {
+            return;
+        }
+
         if (value < this.value) {
             if (!this.left) {
                 this.left = new BSTNode(value);
