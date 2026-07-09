@@ -5,7 +5,7 @@ import type {SetArray, SetIndices, ArrayItem} from "~/components/lib/types";
 interface Props {
     algorithm: (toBeSortedArray: ArrayItem[], setToBeSortedArray: SetArray, setIndices: SetIndices) => Promise<void>;
     title: string;
-    description: ReactNode; // I was not sure if I should use ReactNode or Fragment
+    description: ReactNode;
 }
 
 export default function SortPage({ algorithm, title, description }: Props) {

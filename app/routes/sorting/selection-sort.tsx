@@ -1,5 +1,5 @@
-import SortPage from "~/components/sortPage/sort-page";
-import {SelectionSortDescription} from "~/components/sortPage/sorting-descriptions";
+import SortPage from "~/components/sort-page/sort-page";
+import {SelectionSortDescription} from "~/components/sort-page/sorting-descriptions";
 import type {ArrayItem} from "~/components/lib/types";
 
 async function selectionSort(toBeSortedArray: ArrayItem[], setToBeSortedArray: (arr: ArrayItem[]) => void, setActiveIndices: (indices: number[]) => void) {

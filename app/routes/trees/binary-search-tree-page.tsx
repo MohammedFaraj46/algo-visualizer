@@ -116,5 +116,21 @@ export default function BinarySearchTreePage() {
                 fitViewOptions={{ padding: 0.3, maxZoom: 1.2, minZoom: 1.2 }}
             />
         </div>
+
+        <p className="p-8 w-250">
+            A Binary Search Tree is a data structure where each node has at most two children: a left and a right one.
+            Adding a node is simple: everything smaller than the current node goes left, everything larger goes right.
+            <br/><br/>
+
+            This makes searching really fast. Instead of checking every element, you just follow the rule down the tree until you find what you're looking for. This is similar to binary search but on a tree structure.
+            <br/><br/>
+
+            The catch is that the tree's efficiency depends on its shape. If you insert values in sorted order, the tree becomes a straight line and loses its advantage entirely.
+            <br/><br/>
+
+            <b className="text-green-500">Average search complexity: O(log n) (good)</b>
+            <br/>
+            <b className="text-red-500">Worst case search complexity: O(n) (bad — sorted insertion order)</b>
+        </p>
     </>
 }

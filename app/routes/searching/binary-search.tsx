@@ -1,6 +1,6 @@
-import SearchPage from "~/components/searchPage/search-page";
+import SearchPage from "~/components/search-page/search-page";
 import type {ArrayItem} from "~/components/lib/types";
-import {BinarySearchDescription} from "~/components/searchPage/search-descriptions";
+import {BinarySearchDescription} from "~/components/search-page/search-descriptions";
 
 async function binarySearch(item: ArrayItem, array: ArrayItem[], setActiveIndices: (indices: number[]) => void, setFoundIndex: (index: number) => void) {
     let low: number = 0;

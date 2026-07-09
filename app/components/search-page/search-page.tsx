@@ -9,7 +9,7 @@ interface Props {
 }
 
 export default function SearchPage({ algorithm, title, description }: Props) {
-    const array: ArrayItem[] = Array.from({ length: 20 }, (unused, i) => ({
+    const array: ArrayItem[] = Array.from({ length: 20 }, (_, i) => ({
         id: i,
         value: i + 1
     }));

@@ -6,7 +6,7 @@ interface NavBarButtonProps {
 }
 
 export default function NavBarButton({ text, link } : NavBarButtonProps) {
-    return <Link to={link}>
-        <button className="btn-ghost">{text}</button>
+    return <Link to={link} className="btn-ghost">
+        {text}
     </Link>
 }

@@ -1,5 +1,5 @@
-import SortPage from "~/components/sortPage/sort-page";
-import {MergeSortDescription} from "~/components/sortPage/sorting-descriptions";
+import SortPage from "~/components/sort-page/sort-page";
+import {MergeSortDescription} from "~/components/sort-page/sorting-descriptions";
 import type {ArrayItem} from "~/components/lib/types";
 
 const merge = async (leftArray: ArrayItem[], rightArray: ArrayItem[]) => {

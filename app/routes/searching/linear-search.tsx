@@ -1,5 +1,5 @@
-import SearchPage from "~/components/searchPage/search-page";
-import {LinearSearchDescription} from "~/components/searchPage/search-descriptions";
+import SearchPage from "~/components/search-page/search-page";
+import {LinearSearchDescription} from "~/components/search-page/search-descriptions";
 import type {ArrayItem} from "~/components/lib/types";
 
 async function linearSearch(item: ArrayItem, array: ArrayItem[], setActiveIndices: (indices: number[]) => void, setFoundIndex: (index: number) => void) {

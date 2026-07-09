@@ -1,5 +1,5 @@
-import SortPage from "~/components/sortPage/sort-page";
-import {QuickSortDescription} from "~/components/sortPage/sorting-descriptions";
+import SortPage from "~/components/sort-page/sort-page";
+import {QuickSortDescription} from "~/components/sort-page/sorting-descriptions";
 import type {ArrayItem} from "~/components/lib/types";
 
 const partition = async (array: ArrayItem[], startIdx: number, endIdx: number, setToBeSortedArray: (array: ArrayItem[]) => void, setActiveIndices: (indices: number[]) => void) => {
