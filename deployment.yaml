@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: algo-visualizer-deployment
+  labels:
+    app: algo-visualizer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: algo-visualizer
+  template:
+    metadata:
+      labels:
+        app: algo-visualizer
+    spec:
+      containers:
+        - name: algo-visualizer-server
+          image: algo-visualizer:latest
+          ports:
+            - containerPort: 3000
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "250m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"

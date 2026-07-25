@@ -1,87 +1,70 @@
-# Welcome to React Router!
+# AlgoVisualizer
 
-A modern, production-ready template for building full-stack React applications using React Router.
+An interactive visualizer for common algorithms and data structures. Built to make it easier to understand how these algorithms work by watching them run step by step.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## Algorithms
 
-## Features
+**Sorting**
+- Selection Sort
+- Bubble Sort
+- Merge Sort
+- Quick Sort
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+**Searching**
+- Linear Search
+- Binary Search
+
+**Data Structures**
+- Binary Search Tree
+
+**Graph Algorithms**
+- Depth First Search (DFS)
+- Breadth First Search (BFS)
+
+## Tech Stack
+
+- React 19
+- React Router 7.15.1 (SSR)
+- TypeScript 5
+- Tailwind CSS v4
+- Motion 12
+- React Flow 12
 
 ## Getting Started
 
-### Installation
+### Prerequisites
+- Node.js 20+
+- npm
 
-Install the dependencies:
+### Run locally
 
 ```bash
 npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+The app will be available at `http://localhost:5173`.
 
-## Building for Production
+## Docker
 
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
+Build and run the app in a container:
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+docker build -t algo-visualizer .
+docker run -p 3000:3000 algo-visualizer
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+The app will be available at `http://localhost:3000`.
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+## Kubernetes
 
-### DIY Deployment
+Apply the manifests to your cluster:
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+```bash
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
 ```
 
-## Styling
+## CI/CD
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+A GitHub Actions workflow runs on every push to `main`. It installs dependencies, builds the app, and builds the Docker image to verify nothing is broken.

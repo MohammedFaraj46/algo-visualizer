@@ -1,4 +1,12 @@
 import { Link } from "react-router";
+import type { Route } from "./+types/home";
+
+export function meta({}: Route.MetaArgs) {
+    return [
+        { title: "AlgoVisualizer" },
+        { name: "description", content: "An interactive visualizer for common algorithms and data structures." },
+    ];
+}
 
 export default function Home() {
     return (
